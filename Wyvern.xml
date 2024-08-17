@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	// Version 2.1
+
+	<settings enableScaling="true" />
+	<!-- Background Cover -->
+	<element type="BackgroundAlbumCover" brightness="0.6" refreshInterval="EndOfTrack"/>
+
+	<!-- Album Cover -->
+	<element type="AlbumCover" x="-100" y="-100" width="12" height="12" min="10" max="10"/>
+	<element name="#Cover" type="Block" xAnchor="Panel.48" x="0" yAnchor="Panel.12" y="0" align="Top.Right" widthDock="Panel.Height.60" width="0" heightDock="Panel.Height.60" height="0" bg="0,0,0,0"/>
+
+	<element name="#SpacerR" type="Block" xAnchor="Panel.Right" x="0" yAnchor="#Gallery.Top" y="0" widthDock="Panel.Height.10" width="0" heightDock="Panel.Height.10" height="0" bg="0,255,0,0" align="Top.Right"/>
+	<element name="#SpacerC" type="Block" xAnchor="#Cover.Right" x="0" yAnchor="#Gallery.Top" y="20" widthDock="x:#SpacerR.Left" width="0" heightDock="Panel.Height.10" height="0" bg="0,255,255,0"/>
+
+	<!-- Album Carousel -->
+	<!-- Change "Tracks[x]" to "Albums[x]" if you don't want to see the same album cover repeated many times. -->
+	<element name="#Cover_03" type="AlbumCover" id="Tracks[3]" xAnchor="#SpacerC.-60" x="0" yAnchor="#Cover.Bottom" y="-30" align="Bottom.Right" widthDock="Panel.Height.51" width="0" heightDock="Panel.Height.51" height="0" brightness="0.29"/>
+	<element name="#Cover_02" type="AlbumCover" id="Tracks[2]" xAnchor="#SpacerC.-40" x="0" yAnchor="#Cover.Bottom" y="-20" align="Bottom.Right" widthDock="Panel.Height.56" width="0" heightDock="Panel.Height.56" height="0" brightness="0.44"/>
+	<element name="#Cover_01" type="AlbumCover" id="Tracks[1]" xAnchor="#SpacerC.-20" x="0" yAnchor="#Cover.Bottom" y="-10" align="Bottom.Right" widthDock="Panel.Height.61" width="0" heightDock="Panel.Height.61" height="0" brightness="0.66"/>
+	<element name="#Cover_00" type="AlbumCover" id="Tracks[0]" xAnchor="#SpacerC.0" x="0" yAnchor="#Cover.Bottom" y="0" align="Bottom.Right" widthDock="Panel.Height.65" width="0" heightDock="Panel.Height.65" height="0" brightness="1.0"/>
+
+	<!-- Album Info -->
+		<element type="NowPlayingList"  xAnchor="#Cover_00.Left" x="0" yAnchor="#Cover.Bottom" y="0" widthDock="Panel.Width.40" width="0" heightDock="y:Panel.70" height="0"  rowPadding="20" font="Opensans" style="Regular" size="10" fg="220,220,220" fg2="200,250,255" mouseOverFg="255,255,255">
+      <child id="#" widthDock="Panel.Width.3" format="#\." align="center" />
+      <child id="Title" widthDock="Panel.Width.30" />
+      <child id="Duration" widthDock="Panel.Width.5" align="right" />
+	</element>
+	<element type="Field" id="Title" xAnchor="#Cover_00.Left" x="-4" yAnchor="#Cover.Bottom" y="15" widthDock="x:Panel.70" width="0" align="left" font="Segoe UI Semibold" style="Regular" size="26" fg="255,255,255" />
+	<element type="Field" id="Album" xAnchor="#Cover_00.Left" x="0" yAnchor="#Cover.Bottom" y="65" widthDock="x:#Cover.Right" width="0" align="left" font="Segoe UI" style="Regular" size="13" fg="240,240,240" />
+	<element type="Field" id="Artist" xAnchor="#Cover_00.Left" x="0" yAnchor="#Cover.Bottom" y="90" widthDock="x:#Cover.Right" width="0" align="left" font="Segoe UI" style="Regular" size="13" fg="255,255,255" />
+
+	<!-- Upcoming Tracks List -->
+	<element type="NowPlayingList"  xAnchor="Panel.56" x="0" yAnchor="Panel.10" y="0" widthDock="Panel.Width.40" width="0" heightDock="y:Panel.70" height="0"  rowPadding="18" font="Opensans" style="Regular" size="10" fg="230,230,230" fg2="200,250,255" mouseOverFg="255,255,255">
+      <child id="#" widthDock="Panel.Width.3" format="#\." align="center" />
+      <child id="Title" widthDock="Panel.Width.30" />
+      <child id="Duration" widthDock="Panel.Width.5" align="right" />
+	</element>
+
+	<!-- Progress Bar -->
+	<element type="SoundGraph" fg="160,255,255,255" height="30" width="0" widthDock="x:Panel.76" y="0" yAnchor="Panel.91" x="0" xAnchor="Panel.24" name="#soundgraph" bg="50,255,255,255"/>
+	<element type="PlayPosition" xAnchor="Panel.21.5" x="0" yAnchor="Panel.92" y="0" width="40" reservedWidth="40" font="OpenSans" style="Regular" size="6" fg="255,255,255" />
+	<element type="PlayDuration" xAnchor="Panel.77" x="0" yAnchor="Panel.92" y="0" width="40" font="OpenSans" style="Regular" size="6" fg="255,255,255" />
+
+
+</root>
